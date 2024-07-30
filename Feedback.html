@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        *{
+            font-family: "Poppins", sans-serif;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            border-radius: 5px;
+        }
+        input{
+            border: none;
+        }
+        body{
+            background: linear-gradient(45deg, #f5f7fa, #c3cfe2);
+        }
+        form{
+            background: linear-gradient(45deg, #2b5876, #4e4376);
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        #head{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 1%;
+            font-size: large;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            padding: 2%;
+            width: 80%;
+            margin: 0 auto 0 auto;
+        }
+        #number, #email, #name{
+            padding: 1%;
+            font-size: medium; 
+            outline: none; 
+            margin-bottom: 2%; 
+        }
+        #name-label, #email-label, #number-label,#label-family, #label-friends, #label-place{
+            display: flex;
+            justify-content: left;
+            font-size: large;
+            margin: 1%;
+        }
+        #name-label{
+            margin-top: 0;
+        }
+        #radio{
+            display: flex;
+            justify-content: space-evenly;
+            margin: 1%;
+            font-size: large;
+        }
+        #checkbox{
+            margin: 2%;
+        }
+        #check-ques{
+            margin-bottom: 1%;
+            display: flex;
+            justify-content: left;
+            font-size: large;
+        }
+        #dropdown, textarea{
+            padding: 1%;
+            font-size: medium; 
+            outline: none; 
+            margin: 2%; 
+        }
+        #submit{
+            width: 20%;
+            height: 35px;
+            margin: 0 auto 0 auto;
+            background-color: chocolate;
+            color: white;
+           
+        }
+        #submit:hover{
+            background-color: #45a049;
+        }
+        @media (min-width: 576px) {
+        form {
+            max-width: 540px;
+            }
+        }
+
+        @media (min-width: 768px) {
+        form {
+            max-width: 720px;
+            }   
+        }
+    </style>
+</head>
+<body>
+    <section id="head">
+        <h1 id="title">Feedback Form</h1>
+        <p id="description">Thank you for taking the time to help us improve the platform</p>
+    </section>
+    <form id="survey-form">
+        <label for="name" id="name-label">Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+        <label for="email" id="email-label">E-mail</label>
+        <input type="email" id="email" placeholder="Enter your e-mail" required>
+        <label for="number" id="number-label">Phone Number</label>
+        <input type="number" id="number" min="0000000000" max="9999999999" placeholder="Enter your phone number" required>
+        <div id="radio">
+            <label for="pos"><input type="radio" name="feed" id="pos" checked> Will Visit Again</label>
+            <label for="neg"><input type="radio" name="feed" id="neg"> Not likely to Visit Again</label>
+        </div>
+        <div id="checkbox">
+            <div id="check-ques">With whom you would be more likely to visit again?</div>
+            <label for="family" id="label-family"><input type="checkbox" value="family" id="family" checked> Recommended With Family</label>
+            <label for="friends" id="label-friends"><input type="checkbox" value="friends" id="friends" checked> Recommended With Friends</label>
+            <label for="place" id="label-place"><input type="checkbox" value="place" id="place"> Not my type of location</label>
+        </div>
+        <select id="dropdown">
+            <option  value="option">Share Your Experience</option>
+            <option  value="best">Liked It</option>
+            <option  value="better">Could Be Better</option>
+            <option  value="worse">Not Impressed</option>
+        </select>
+        <textarea placeholder="Any Other Suggestion Or Feedback" rows="6" cols="50"></textarea>
+        <input type="submit" id="submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        body{
+            background-color: grey;
+            text-align: center;
+        }
+        #container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        #container div{
+            margin: 5%;
+        }
+        #btn{
+            font-size: x-large;
+            border-radius: 5px;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>BMI Calculator</h1>
+    <form>
+        <div id="container">
+            <div>
+                <label for="num">Height in CM: </label>
+                <input type="number" id="num">
+            </div>
+            <div>
+                <label for="mass">Weight in KG: </label>
+                <input type="number" id="mass">
+            </div>
+        </div>
+        <button type="submit" id="btn">Calculate</button>
+    </form>
+    <h2>BMI Weight Guide</h2>
+    <div id="info">
+        <h2>Under Weight = Less than 18.6</h2>
+        <h2>Normal Range = 18.6 and 24.9</h2>
+        <h2>Overweight = Greater than 24.9</h2>
+        <h3>BMI = Weight(in kilograms) / Height<sup>2</sup>(in meters)</h3>
+        <h1 id="result"></h1>
+    </div>
+</body> 
+<script>
+       document.getElementById('btn').addEventListener('click', function(event) {
+        event.preventDefault(); 
+
+        const h = parseFloat(document.querySelector("#num").value);  
+        const w = parseFloat(document.querySelector("#mass").value);  
+        
+        const bmi = w / ((h / 100) * (h / 100));  
+        document.getElementById("result").innerText = `Your BMI : ${bmi.toFixed(2)}`;
+        
+    })
+    
+</script>
+</html>

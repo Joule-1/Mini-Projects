@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roman Number</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: "Cinzel", serif;
+            font-optical-sizing: auto;
+            color: #f5f5f5;
+        }
+        body{
+            background: linear-gradient(90deg, #2e2e2e, #0c0c0c);
+        }
+        main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        h1{
+            font-size: xxx-large;
+            font-weight:  bolder;
+            margin: 2%;
+            text-align: center;
+        }
+        input{
+            width: 30%;
+            font-size: x-large;
+            outline: none;
+            background: transparent;
+            border: none;
+            caret-color: white;
+            color: white;
+            border-bottom: 2px solid purple;
+            padding-left: 2%;
+            margin: 3%;
+        }
+        button{
+            padding: 2% 5% 2% 5%;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            font-size: large;
+            color: purple;
+            font-weight: bolder;
+            outline: none;
+        }
+        button:hover{
+            background-color: purple;
+            color: white;
+        }
+        #results-div{
+            margin: 2%;
+            font-size: xx-large;
+        }
+        #button-grp{
+            display: flex;
+            width: 20%;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Telephone Number Validator for USA</h1>
+        <input type="text" id="user-input" placeholder="Enter Your Number Here" autofocus autocomplete="off">
+        <div id="button-grp">
+            <button id="check-btn" onclick="numberPositioner()">Convert</button>
+            <button id="clear-btn" onclick="clearer()">Clear</button>
+        </div>
+        <div id="results-div">Encapsulate The Intrigued</div>
+    </main>
+</body>
+<script>
+    function numberChecker(str){
+    let regex = /^1?\s?(\d{3}|\(\d{3}\))-?\s?\d{3}-?\s?\d{4}$/gm;
+    return regex.test(str);
+}
+
+function numberPositioner(){
+    let str = document.getElementById('user-input').value;
+    if(str == ""){
+        alert("Please provide a phone number")
+    }
+    else if(numberChecker(str) == true){
+        document.getElementById('results-div').innerText = `Valid US number: ${str}`;
+    }
+    else if(numberChecker(str) == false){
+        document.getElementById('results-div').innerText = `Invalid US number: ${str}`;
+    }
+}
+
+function clearer(){
+    document.getElementById('results-div').innerText = "";
+}
+</script>
+</html>

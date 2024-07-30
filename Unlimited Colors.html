@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer 2</title>
+</head>
+<body>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const hex = "0123456789ABCDEF"
+    let color = "#"
+    let changer
+    body = document.querySelector('body')
+    document.querySelector("#start").addEventListener('click',function(){
+            changer = setInterval(function(){
+            // console.log(hex[Math.floor(Math.random()*16)])
+            for(i=0; i<6; i++){
+                color += hex[Math.floor(Math.random()*16)]
+            }
+            document.querySelector('body').style.backgroundColor = color
+            console.log(color)
+            color = "#"
+        },2000);
+    })
+    document.querySelector("#stop").addEventListener('click',function(){
+        clearTimeout(changer);
+    })
+</script>
+</html>
