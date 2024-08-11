@@ -1,0 +1,65 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main{
+  height: 100vh;
+  background-color: #152238;
+  display: flex;
+  align-items: center;
+}
+
+.main > .container{
+  margin: auto auto;  
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1%;
+  width: 40%;
+  box-shadow: 0 0 10px 5px white;
+  border-radius: 5px;
+}
+
+.container > .title{
+  color: orange;
+  margin: 3% 0 5% 0;   
+  font-size: x-large;
+}
+
+.container > .input-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%; 
+  margin-bottom: 2%;
+}
+
+.input-container > input{
+  width: 100%;
+  padding: 5px 5px 5px 10px ; 
+  outline: none;
+  border-radius: 5px 0 0 5px;
+  cursor: none;
+  color: #f000ff;
+  font-weight: bold;
+}
+
+.input-container > .copy{
+  background-color: blue;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+
+.container > .range-box{
+  color: orange;
+  display: flex;
+  align-items: center;
+}
+
+.range-box > .range-container{
+  display: flex;
+}
