@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: medium;
+}
+
+body{
+    overflow: hidden;
+}
+
+.navbar{
+    background-color: #3787b9;
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    width: 100%;
+}
+
+.institution_name{
+    color: white;
+    width: 30%;
+    display: flex;
+}
+
+.institution_link, .project_link{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.institution_name img{
+    width: 10%;
+    margin-right: 3%;
+}
+
+.project_name{
+    color: white; 
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.name, .student_number{
+    width: 100%;
+    height: 25px;
+    font-size: large;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+}
+
+.registration{
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(184,226,242,1);
+    padding: 2%;
+}
+
+.name_label, .student_number_label{
+    width: 40%;
+    margin: 1%;
+}
+
+fieldset{
+    border-color: #3787b9;
+    border-radius: 10px;
+}
+
+fieldset:hover{
+    border-color: #0adbd4;
+}
+
+.subject{
+    width: 60%;
+    font-size: large;
+    border: 2px solid #3787b9;
+    outline: none;
+    height: 50px;
+    margin: 1.7%;
+    border-radius: 10px;
+}
+
+.submit{
+    width: 40%;
+    height: 50px;
+    font-size: large;
+    border-radius: 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.submit:hover{
+    background-color: #32CD32;
+}
+
+.allocation{
+    display: block;
+    font-size: large;
+    margin: 2%;
+    width: 60%;
+    line-height: 2;
+    word-spacing: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(76,175,80,0.7);
+}
+
+.wrong_input{
+    box-shadow: 0px 0px 10px 0px rgba(255,127,127,1);
+    animation: alert_input 2s linear;
+    animation-iteration-count: 3;
+}
+
+@keyframes alert_input{
+    0%{
+        box-shadow: 0px 0px 10px 0px rgba(255,127,127,1);
+    }
+    50%{
+        box-shadow: 0px 0px 20px 0px rgba(255,127,127,1);
+    }
+    100%{
+        box-shadow: 0px 0px 10px 0px rgba(255,127,127,1);
+    }
+}
+
+.hr_line{
+    opacity: 0.3;
+    width: 75%;
+    margin: 1%;
+}

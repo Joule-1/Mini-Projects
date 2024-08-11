@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Management</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="institution_name"><img src="akgec.png"><a href="https://www.akgec.ac.in/" class="institution_link">Ajay Kumar Garg Engineering College</a></div>
+        <div class="project_name"><a href="index.html" class="project_link">Computer Management System</a></div>
+    </div>
+    <br><br><br>
+    
+        <center>
+            <div class="registration" id="registration">
+                <label for="name" class="name_label">
+                    <fieldset>
+                        <legend>*</legend>
+                        <input type="text" class="name" id="name" placeholder="Enter Your Name" autocomplete="off" >
+                    </fieldset>
+                </label>
+                <label for="student_number" class="student_number_label">
+                    <fieldset>
+                        <legend>*</legend>
+                        <input type="text" class="student_number" id="student_number" pattern="[0-9]{7,8}" title="Student Number Contain Only 7 Digits" placeholder="Enter Your Student Number" autocomplete="off" required>
+                    </fieldset>
+                </label>
+                <select id="subject" class="subject" required>
+                    <option value="Web Designing Workshop">&nbsp; Web Designing Workshop</option>
+                    <option value="Computer Organisation Lab">&nbsp; Computer Organisation Lab</option>
+                    <option value="Data Structure Using C Lab">&nbsp; Data Structure Using C Lab</option>
+                </select>
+                <button class="submit" onclick="computer_assign()">Submit</button>
+            </div>
+            <div class="allocation" id="allocation"></div>
+        </center>
+
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
