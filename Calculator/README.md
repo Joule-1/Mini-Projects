@@ -1,8 +1,5 @@
-# React + Vite
+# Problem To Be Resolved 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Operation of bracket with keyboard
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+On button click, if the number of open brackets is greater than number of close brackets then on clicking the bracket button it will automatically place close brackets untill number of open and close brackets are equal, but this is not happening with key press 
