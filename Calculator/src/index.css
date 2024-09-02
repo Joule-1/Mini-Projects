@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.outer, .inner, .special{
+    user-select: none;
+    border-radius: 9999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20% 1% 20% 1%;
+    background-color: #3A4455;
+    font-size: larger;
+    cursor: pointer;
+}
+
+
+.special{
+    background-color: green;
+    font-size: xx-large;
+    padding: 10% 1% 10% 1%;
+    color: white;
+}
+
+.inner{
+    background-color: #1F2937;
+    color: white;
+}
+
+.outer:hover{
+    background-color: #2a374a;
+}
+
+.inner:hover{
+    background-color: #4a5971;
+}
+
+.special:hover{
+    background-color: #016701;
+}
+
+.divide, .multiply, .minus, .plus{
+    font-size: xx-large;
+    padding: 10% 1% 10% 1%;
+    color: #81C784;
+}
+
+.diff{
+    font-size: x-large;
+    padding: 15% 1% 15% 1%;
+    color: #81C784;
+}
+
+.resultContainer{
+    position: relative;
+}
+
+.copyResult{
+    display: none;    
+    cursor: pointer;
+    user-select: none;       
+}
+
+/* .resultContainer:hover .copyResult{
+    display: block;
+    cursor: pointer;
+    user-select: none;
+} */
