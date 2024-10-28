@@ -9,7 +9,7 @@ function App() {
 	const resultCopyRef = useRef(null)
 
 	const handleButtonClick = (value) => {
-
+		console.log('VALUE', value);
 		handleAfterCopied();
 
 		setCount((prevCount) => {
@@ -45,18 +45,20 @@ function App() {
 	}
 
 	const handleBracket = () => {
-		let openBracketCnt = (count.match(/\(/g) || []).length
-		let closeBracketCnt = (count.match(/\)/g) || []).length
-
+		console.log('count', count)
 		handleAfterCopied();
 
 		setCount((prevCount) => {
+			let openBracketCnt = (prevCount.match(/\(/g) || []).length
+			let closeBracketCnt = (prevCount.match(/\)/g) || []).length
 
 			if(openBracketCnt === closeBracketCnt){
-				return prevCount === '0' ? '(' : prevCount + '('
+	
+				return prevCount === '0' ? '(' : (prevCount + '(');
 			}
 			else if(openBracketCnt > closeBracketCnt){
-				return prevCount + ')'
+	
+				return prevCount + ')';
 			}
 
 		})
@@ -157,6 +159,7 @@ function App() {
 
 		// Handle brackets
 		if (key === '(' || key === ')') {
+			console.log("Kry: ",key)
 			handleBracket(); //	
 		}
 	}
