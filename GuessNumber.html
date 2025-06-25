@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guess</title>
+</head>
+<style>
+    section{
+        background-color: grey;
+        border-radius: 10px;
+        width: 50%;
+        display: inline-block;
+        right: 50%;   
+        transition: 3s;
+    }
+    input{
+        outline: none;
+    }
+</style>
+<body style="background-color: black; color: white; font-weight: bold; text-align: center;">
+    <h1>Number Guessing Game</h1>
+    <section class="main">
+        <h2>Try and guess a random number between 1 and 100.<br><br> You have 10 attempts to guess the right number.</h2>
+        <h1>Guess The Number</h1>
+        <input type="text" id="input"><br><br>
+        <button type="submit" id="submit">Submit Guess</button>
+        <h5 id="h5"></h5>
+        <h4 id="h4"></h4>
+        <h3 id="h3"></h3>
+        <button id="try" style="display: none;">Try Again</button>
+    </section>
+</body>
+<script>
+    num = Math.floor(Math.random() * 100 + 1)
+    guess = 10;
+    user = document.getElementById("input")
+    submit = document.getElementById("submit")
+    h3 = document.getElementById('h3')
+    h4 = document.getElementById('h4')
+    h5 = document.getElementById('h5')
+    again = document.getElementById('try')
+    user.focus();
+    submit.addEventListener('click', function(event){
+        user.focus();
+        h4.innerText = `Guess Remaining: ${guess}`
+        if(guess <= 0){
+            h4.innerText = "Game Over"
+            h3.innerText = `The Number was ${num}`
+            user.disabled = true;
+            again.style = 'display: visible;'
+        }
+        else if(num == user.value){
+            h3.innerText = "Guessed Correctly"
+            h4.innerText = ":)"
+            again.style = 'display: visible;'
+        }
+        else if(num != user.value & guess>=1){
+            h3.innerText = "Wrong Guess !!"
+            h5.innerText = h5.innerText + " | " + user.value
+            user.value = " "
+            guess -= 1;
+        }  
+    })
+    again.addEventListener('click', function(){
+        user.focus();
+        location.reload();
+    })
+</script>
+</html>

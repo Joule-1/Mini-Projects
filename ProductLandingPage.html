@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    <style>
+        *{
+            font-family: "Poppins", sans-serif;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background: linear-gradient(135deg, #f5f5f5, #ffffff);
+        }
+        header > img{
+            width: 30%;
+        }
+        header{
+            position: fixed;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2% 0 0.5%;
+            background-color: #ffffff;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            width: 30%;
+        }
+        .nav-link{
+            margin: 3%;
+        }
+        nav > a{
+            text-decoration: none;
+            color: black;
+        }
+        form{
+            margin: 0 auto 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        #form-header{
+            display: flex;
+            justify-content: center;
+            margin: 2% 0 1% 0;
+            font-weight: bold;
+            font-size: x-large;
+        }
+        input{
+            padding: 1%;
+            outline: none;
+            margin: 1%;
+            border-radius: 5px;
+            border: none;
+            width: 40%;
+            background-color: rgb(220, 220, 220);
+        }
+        #submit{
+            width: 20%;
+            font-weight: bolder;
+            cursor: pointer;
+            font-size: medium;
+            color: white;
+            background-image: linear-gradient(135deg, #4CAF50, #218838);
+        }
+        #features{
+            margin-top: 10%;
+            display: grid;
+            grid-template-columns: auto 80%;
+        }
+        .icon{
+            color: #218838;
+            margin: 0% 0 20% 0;
+            grid-column: 1/2;
+            display: flex;
+            justify-content: center;
+        }
+        .feature_header{
+            grid-column: 2/3;
+        }
+        .feature_header_line{
+            font-weight: bold;
+            font-size: x-large;
+        }
+        .feature_header_detail{
+            font-size: medium;
+        }
+        #videos{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5% auto 5% auto;
+        }
+        iframe{
+            border: none;
+            border-radius: 10px;
+        }
+        .cards{
+            display: grid;
+            grid-gap: 2%;
+            padding: 0 1% 0 1%;
+            margin: 0 auto;
+            width: 80%;
+        }
+        #card1{
+            grid-column: 1/2;
+        }
+        #card2{
+            grid-column: 2/3;
+        }
+        #card3{
+            grid-column: 3/4;
+        }
+        .card{
+            border: 1px solid black;
+            text-align: center;
+        }
+        .card_header{
+            background-color: #e9e6e6;
+            width: 100%;
+            font-size: medium;
+            padding: 4%;
+            margin-bottom: 4%;
+        }
+        h5{
+            font-weight: normal;
+            font-size: medium;
+            margin: 4% 0 8% 0;
+        }
+        button{
+            background-color: #218838;
+            border-radius: 5px;
+            padding: 2% 10% 2% 10%;
+            color: white;
+            font-size: large;
+            border: none;
+            margin-bottom: 4%;
+        }
+        footer{
+            background-color: #e9e6e6;
+            margin-top: 5%;
+        }
+        .foot-link{
+            font-size: medium;
+            font-weight: bold;
+            margin: 2% 2% 0 2%;
+            cursor: pointer;
+        }
+        #foot-link-column{
+            display: flex;
+            justify-content: right;   
+        }
+        #footer-copyright{
+            text-align: right;
+            margin: 1% 2% 0 2%;
+        }
+        @media (max-width: 800px) {
+            body{
+                background-color: blue;
+            }
+            header > img{
+                width: 50%;
+            }
+            .cards{
+                display: flex;
+                flex-direction: column;
+            }
+            .card{
+                width: 60%;
+                margin: 2% auto 2% auto;
+            }
+            .nav-link{
+                font-size: small;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png" alt="Header Image Appears Here" id="header-img">
+        <nav id="nav-bar">
+            <a class="nav-link" href="#features">Features</a>
+            <a class="nav-link" href="#videos">How It Works</a>
+            <a class="nav-link" href="#card1">Pricing</a>
+        </nav>
+    </header>
+    <br><br><br><br>
+    <form action="https://www.freecodecamp.com/email-submit" method="POST" id="form">
+        <div id="form-header">
+            Handcrafted, home-made masterpieces
+        </div>
+        <input type="email" id="email" name="email" placeholder="Enter your e-mail">
+        <input type="submit" id="submit" value="Get Started">
+    </form>
+    <div id="features">
+        <div class="icon"><i class="fa fa-3x fa-fire"></i></div>
+        <div class="feature_header">
+            <div class="feature_header_line">
+                Premium Materials
+            </div>
+            <div class="feature_header_detail">
+                Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase.
+            </div>
+        </div>
+        <div class="icon"><i class="fa fa-3x fa-truck"></i></div>
+        <div class="feature_header">
+            <div class="feature_header_line">
+                Fast Shipping
+            </div>
+            <div class="feature_header_detail">
+                We make sure you recieve your trombone as soon as we have finished making it. We also provide free returns if you are not satisfied.
+            </div>
+        </div>
+        <div class="icon"><i class="fa fa-3x fa-battery-full"></i></div>
+        <div class="feature_header">
+            <div class="feature_header_line">
+                Quality Assurance
+            </div>
+            <div class="feature_header_detail">
+                For every purchase you make, we will ensure there are no damages or faults and we will check and test the pitch of your instrument.
+            </div>
+        </div>
+    </div>
+    <div id="videos">
+        <iframe id="video" width="70%" height="500px" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+    </div>
+    <div class="cards">
+        <div class="card" id="card1">
+            <div class="card_header">
+                TENOR TROMBONE
+            </div>
+            <div class="card_desc">
+                <h2>$600</h2>
+                <h5>Lorem ipsum.</h5>
+                <h5>Lorem ipsum.</h5>
+                <h5>Lorem ipsum dolor.</h5>
+                <h5>Lorem ipsum.</h5>
+                <button>Select</button>
+            </div>
+        </div>
+        <div class="card" id="card2">
+            <div class="card_header">
+                BASS TROMBONE
+            </div>
+            <div class="card_desc">
+                <h2>$900</h2>
+                <h5>Lorem ipsum.</h5>
+                <h5>Lorem ipsum.</h5>
+                <h5>Lorem ipsum dolor.</h5>
+                <h5>Lorem ipsum.</h5>
+                <button>Select</button>
+            </div>
+        </div>
+        <div class="card" id="card3">
+            <div class="card_header">
+                VALVE TROMBONE
+            </div>
+            <div class="card_desc">
+                <h2>$1200</h2>
+                <h5>Lorem ipsum.</h5>
+                <h5>Lorem ipsum.</h5>
+                <h5>Lorem ipsum dolor.</h5>
+                <h5>Lorem ipsum.</h5>
+                <button>Select</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div id="footer">
+            <div id="foot-link-column">
+                <div class="foot-link">Privacy</div>
+                <div class="foot-link">Terms</div>
+                <div class="foot-link">Contact</div>
+            </div>
+            <div id="footer-copyright">
+                Copyright 2016, Original Trombones
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <style>
+        *{
+            font-family: "Poppins", sans-serif;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            color: white;
+            text-decoration: none;
+        }
+        ::-webkit-scrollbar {
+            width: 10px;
+            background-color: #ff7e5f;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #f0f7ff; 
+            border-radius: 10px;
+        }
+        #welcome-section{
+            background: linear-gradient(135deg, #232526, #414345);
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #welcome-section > h1{
+            font-size: xxx-large;
+        }
+        #welcome-section > h4{
+            font-weight: lighter;
+            font-size: x-large;
+            word-spacing: 4px;
+            color: #feb47b;
+        }
+        #navbar{
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            display: flex;
+            justify-content: right;
+            font-size: larger;
+            position: fixed;
+            width: 100%; 
+        }
+        .nav-link{
+            margin: 1.5%;
+            cursor: pointer;
+        }
+        #projects{
+            height: 180vh;
+            background-color: burlywood;
+        }
+        #projects > h1{
+            text-align: center;
+            font-size: xx-large;
+            margin-bottom: 1%;
+            padding-top: 10%;
+        }
+        #projects > hr{
+            width: 75%;
+            margin: 0 auto 4% auto;
+            background-color: white;
+            height: 0.5%;
+            border: none;
+            border-radius: 5px;
+        }
+        .project-tile{
+            display: grid;
+            grid-gap: 4%;
+            padding: 0 1% 0 1%;
+            width: 70%;
+            margin: 0 auto;
+            margin-bottom: 2%;
+        }
+        img{
+            width: 100%;
+            border-radius: 10px;
+        }
+        #project-tile1{
+            grid-column: 1/2;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            border-radius: 10px;
+        }
+        #project-tile2{
+            grid-column: 2/3;   
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            border-radius: 10px;
+        }
+        #project-tile4{
+            grid-column: 1/2;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            border-radius: 10px;
+        }
+        #project-tile5{
+            grid-column: 2/3;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            border-radius: 10px;
+        }
+        #project-tile1 > img, #project-tile2 > img, #project-tile4 > img, #project-tile5 > img{
+            height: 80%;
+            min-width: 100%;
+        }
+        .project-desc{
+            text-align: center;
+            margin-top: 2%;
+            font-size: large;
+        }
+        #contact-page{
+            background-color: rgb(78, 50, 29);
+        }
+        .contact-heading{
+            font-size: xxx-large;
+            text-align: center;
+        }
+        .contact-desc{
+            text-align: center;
+            margin-bottom: 4%;
+        }
+        #profiles{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin-bottom: 2%;
+        }
+        .social-media{
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            margin: 1%;
+            min-width: 25%;
+            font-size: x-large;
+            cursor: pointer;
+        }
+        #footer-line{
+            width: 75%;
+            margin: 0 auto 4% auto;
+            background-color: white;
+            border-radius: 5px;
+        }
+        .copyright-details{
+            text-align: center;
+            padding-bottom: 5%;
+        }
+        @media (max-width: 1000px){
+            #projects{
+                height: 120vh;
+                overflow: auto;
+            }  
+            
+        }
+        @media (max-width: 850px){
+            #projects{
+                height: 200vh;
+            }   
+            .project-title{
+                display: grid;
+                grid-gap: 4%;
+                width: 50%;
+                margin: 0 auto;
+            }
+            .project-desc{
+                font-size: small;
+                padding-bottom: 10%;
+            }
+            #project-tile1, #project-tile2, #project-tile4, #project-tile5{
+            grid-column: 1/2;
+            margin: 0 auto;
+            width: 50%;
+        }
+        @media (max-width: 680px){
+            #projects{
+                height: 150vh;
+            }    
+        }
+        @media (max-width: 560px){
+            #projects{
+                height: 120vh;
+            } 
+            .project-desc{
+                font-size: xx-small;
+                padding-bottom: 10%;
+            }
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+    <a class="nav-link" href="#welcome-section">About</a>
+    <a class="nav-link" href="#projects">Work</a>
+    <a class="nav-link" href="#profiles">Contact</a>
+    </nav>
+    <section id="welcome-section">
+        <h1>Hey I am Joule</h1>
+        <h4>a web developer</h4>
+    </section>
+    <section id="projects">
+        <h1>These are some of my projects</h1>
+        <hr>
+        <div class="project-tile">
+            <a id="project-tile1" href="https://codepen.io/freeCodeCamp/full/zNqgVx" target="_blank">
+                <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg" alt="Tribute Page">
+                <div class="project-desc">
+                    Tribute Page
+                </div>
+            </a>
+            <a id="project-tile2" href="https://codepen.io/freeCodeCamp/full/qRZeGZ" target="_blank">
+                <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png" alt="Quote Machine">
+                <div class="project-desc">
+                    Random Quote Machine
+                </div>
+            </a>
+            <a id="project-tile4" href="https://codepen.io/freeCodeCamp/full/mVEJag" target="_blank">
+                <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/map.jpg" alt="World Map">
+                <div class="project-desc">
+                    Map Data Across The Globe
+                </div>
+            </a>
+            <a id="project-tile5" href="https://codepen.io/freeCodeCamp/full/wGqEga" target="_blank">
+                <img src="https://cdn.freecodecamp.org/testable-projects-fcc/images/wiki.png" alt="Wiki Page">
+                <div class="project-desc">
+                    Wikipedia Viewer
+                </div>
+            </a>
+        </div>
+    </section>
+    <div id="contact-page">
+        <div class="contact-page-text">
+            <div class="contact-heading">Let's work together</div>
+            <div class="contact-desc"><i>How do you take your cofee?</i></div>
+        </div>
+        <div id="profiles">
+            <a href="" id="profile-link" target="_blank"></a>
+            <div class="social-media"><i class="fab fa-facebook-square"></i> &nbsp; Facebook</div>
+            <div class="social-media"><i class="fab fa-facebook-square"></i> &nbsp; Github</div>
+            <div class="social-media"><i class="fab fa-github"></i> &nbsp; Twitter</div>
+            <div class="social-media"><i class="fab fa-twitter"></i> &nbsp; Send a mail</div>
+            <div class="social-media"><i class="fas fa-mobile-alt"></i> &nbsp; Call me</div>
+        </div>
+        <hr id="footer-line">
+        <div class="copyright-details">
+            This is a portfolio created by me. All the projects and contact details given are not real.
+        </div>
+    </div>
+</body>
+</html>

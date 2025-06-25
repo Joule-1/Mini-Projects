@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .box{
+            width: 150px;
+            height: 100px;
+            margin: 2%;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .container{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;    
+        }
+    </style>
+</head>
+<body style="font-weight: bolder;" id="bodys">
+    <h1>Color Scheme Switcher</h1>
+    <br>
+    <div class="container" id="con">
+        <div class="box" id="grey" style="background-color: grey;"></div>
+        <div class="box" id="purple" style="background-color: purple;"></div>
+        <div class="box" id="brown" style="background-color: brown;"></div>
+        <div class="box" id="greenyellow" style="background-color: greenyellow;"></div>
+    </div>
+    <br>
+    <h1>Click On Any of The Above Colors To Change the Background of this page</h1>
+</body>
+<script>
+
+    const removeBorder = function(){
+        const box_collection = document.getElementsByClassName("box")
+        for(i = 0; i < box_collection.length; i++){
+            box_collection[i].style.border = "none"
+        }
+    }
+
+    const container = document.querySelector(".container");    
+    container.addEventListener('click',function(event){
+        const color = event.target.id;
+        if(color !== container.id){
+            document.querySelector('body').style.backgroundColor = color
+            removeBorder();
+            container.querySelector(`#${color}`).style.border = '5px solid green'
+        }
+    }) 
+</script>
+</html>

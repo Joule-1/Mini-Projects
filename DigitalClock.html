@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: white;
+        }
+        .container{
+            position: absolute;
+            right: 50%;
+            bottom: 50%;
+            text-align: center;
+        }
+        #time{
+            background-color: orange;
+            right: 50%;
+            bottom: 50%;
+            color: black;
+            font-weight: bold;
+            padding: 5%;
+            border-radius: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Your Local Time</p>
+        <div id="time"></div>
+    </div>
+</body>
+<script>
+    const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    setInterval(function(){
+        const d = new Date();
+        document.getElementById("time").innerText = `${d.getDate()} ${month[d.getMonth()]} ${d.getFullYear()} | ${d.getHours()} : ${d.getMinutes()} : ${d.getSeconds()}`
+    }, 1000); 
+</script>
+</html>
